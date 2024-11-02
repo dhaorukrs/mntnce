@@ -59,7 +59,7 @@
             color: #333;
         }
 
-        .social-icons {
+        .social-buttons {
             display: flex;
             justify-content: space-around;
             margin-top: 10px;
@@ -67,7 +67,13 @@
             gap: 10px;
         }
 
-        .social-icons a img {
+        .social-buttons button {
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+        }
+
+        .social-buttons button img {
             width: 40px;
             height: 40px;
             border-radius: 50%;
@@ -79,25 +85,27 @@
     <div class="container">
         <h1>App Under Maintenance</h1>
         <div class="maintenance-icon">
-            <img src="maintenance.png" alt="Maintenance Icon"> <!-- Updated to display maintenance.png -->
+            <img src="maintenance.png" alt="Maintenance Icon">
         </div>
         <div class="follow">
             <p>Follow us:</p>
-            <div class="social-icons">
-                <a href="https://www.youtube.com/@Mine_Dark_hours" class="icon youtube"><img src="youtube.png" alt="YouTube"></a>
-                <a href="https://t.me/Official_Dark_Hours" class="icon telegram"><img src="telegram.png" alt="Telegram"></a>
-                <a href="https://www.tiktok.com/@officialdarkhours?_t=8r42hdlCC9t&_r=1" class="icon tiktok"><img src="tiktok.png" alt="TikTok"></a>
-                <a href="https://www.instagram.com/officialdarkhours?igsh=M2x6Z2twaXJlbnhu" class="icon instagram"><img src="instagram.png" alt="Instagram"></a>
-                <a href="https://x.com/Mine_Hours?t=FIZFQfTfeGzf059cyW5SOA&s=09" class="icon x"><img src="x.png" alt="X"></a>
-                <a href="https://whatsapp.com/channel/0029Vaod8bQBvvsYoOdJEh0S" class="icon what"><img src="what.png" alt="WhatsApp"></a>
-                <a href="https://whatsapp.com/channel/0029Vaod8bQBvvsYoOdJEh0S" class="icon facebook"><img src="facebook.png" alt="Facebook"></a>
+            <div class="social-buttons">
+                <button onclick="openApp('https://www.youtube.com/@Mine_Dark_hours')"><img src="youtube.png" alt="YouTube"></button>
+                <button onclick="openApp('https://t.me/Official_Dark_Hours')"><img src="telegram.png" alt="Telegram"></button>
+                <button onclick="openApp('https://www.tiktok.com/@officialdarkhours?_t=8r42hdlCC9t&_r=1')"><img src="tiktok.png" alt="TikTok"></button>
+                <button onclick="openApp('https://www.instagram.com/officialdarkhours?igsh=M2x6Z2twaXJlbnhu')"><img src="instagram.png" alt="Instagram"></button>
+                <button onclick="openApp('https://x.com/Mine_Hours?t=FIZFQfTfeGzf059cyW5SOA&s=09')"><img src="x.png" alt="X"></button>
+                <button onclick="openApp('https://whatsapp.com/channel/0029Vaod8bQBvvsYoOdJEh0S')"><img src="what.png" alt="WhatsApp"></button>
+                <button onclick="openApp('https://whatsapp.com/channel/0029Vaod8bQBvvsYoOdJEh0S')"><img src="facebook.png" alt="Facebook"></button>
             </div>
         </div>
     </div>
 
     <!-- JavaScript -->
     <script>
-        // Add JavaScript here if you want to include any interactivity in the future.
+        function openApp(url) {
+            window.open(url, '_blank');
+        }
     </script>
 </body>
 </html>
