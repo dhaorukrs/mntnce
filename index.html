@@ -32,6 +32,30 @@
             max-width: 400px;
         }
 
+                /* Add the border glow animation */
+        @keyframes borderGlow {
+          0% {
+            border-color: rgba(0, 0, 255, 0.5);
+            box-shadow: 0 0 5px rgba(0, 0, 255, 0.5), 0 0 15px rgba(0, 0, 255, 0.3);
+          }
+          50% {
+            border-color: rgba(255, 0, 255, 0.5);
+            box-shadow: 0 0 10px rgba(255, 0, 255, 0.5), 0 0 20px rgba(255, 0, 255, 0.3);
+          }
+          100% {
+            border-color: rgba(0, 255, 0, 0.5);
+            box-shadow: 0 0 5px rgba(0, 255, 0, 0.5), 0 0 15px rgba(0, 255, 0, 0.3);
+          }
+        }
+
+        /* Apply the glow animation to the game container */
+        .container {
+          animation: borderGlow 2s infinite alternate;
+          border: 2px solid transparent; /* Ensure a defined border for the animation */
+        }
+        }
+        
+
         h1 {
             font-size: 24px;
             color: #333;
@@ -90,11 +114,11 @@
         <div class="follow">
             <p>Stay updated:</p>
             <div class="social-buttons">
-                <button onclick="openApp('https://www.youtube.com/@Mine_Dark_hours')"><img src="youtube.png" alt="YouTube"></button>
+                <button onclick="openApp('https://www.youtube.com/@globaldarkhours')"><img src="youtube.png" alt="YouTube"></button>
                 <button onclick="openApp('https://t.me/Official_Dark_Hours')"><img src="telegram.png" alt="Telegram"></button>
                 <button onclick="openApp('https://www.tiktok.com/@officialdarkhours?_t=8r42hdlCC9t&_r=1')"><img src="tiktok.png" alt="TikTok"></button>
-                <button onclick="openApp('https://www.instagram.com/officialdarkhours?igsh=M2x6Z2twaXJlbnhu')"><img src="instagram.png" alt="Instagram"></button>
-                <button onclick="openApp('https://x.com/Mine_Hours?t=FIZFQfTfeGzf059cyW5SOA&s=09')"><img src="x.png" alt="X"></button>
+                <button onclick="openApp('https://www.instagram.com/officialdarkhours?igsh=MXBwOXRwbnZtNml6bA==')"><img src="instagram.png" alt="Instagram"></button>
+                <button onclick="openApp('https://x.com/globaldarkhours?t=mossidc1c-PpaZlzAgsAzA&s=09')"><img src="x.png" alt="X"></button>
                 <button onclick="openApp('https://whatsapp.com/channel/0029Vaod8bQBvvsYoOdJEh0S')"><img src="what.png" alt="WhatsApp"></button>
                 <button onclick="openApp('https://www.facebook.com/profile.php?id=61567893127287&mibextid=ZbWKwL')"><img src="facebook.png" alt="Facebook"></button>
             </div>
